@@ -14,7 +14,7 @@ def check_int(user_input):
 while True:
     print("Welcome to File Manager")
 
-    #Opthions for user
+    #Options for user
     print("Please select the option to continue,")
     print("     1) List Directory Files and Folders")
     print("     2) Create a folder")
@@ -97,7 +97,7 @@ while True:
             adjusted_rename_file_path=rename_file_path.replace("\\","/")
 
             if os.path.exists(adjusted_rename_file_path):
-                new_file_name=input("Please enter the new file name: ")
+                new_file_name=input("Please enter the new file name: ") #Get new file name from user
                 os.rename(adjusted_rename_file_path,new_file_name)
                 
                 print("Successfully renamed the file to ",new_file_name)
@@ -110,7 +110,7 @@ while True:
             updated_file_path=file_path.replace("\\","/")
 
             if os.path.exists(updated_file_path):
-                file_size=os.path.getsize(updated_file_path)
+                file_size=os.path.getsize(updated_file_path)#Get file size from os
                 print("The current file size is ", file_size)
             
             else:
@@ -119,7 +119,7 @@ while True:
         print("Please enter a valid input.")
 
 
-    try_again=input("Do you wanna try again? y=yes,n=no :")
+    try_again=input("Do you wanna try again? y=yes,n=no :")#Try again
 
     if try_again!="y":
         break    
